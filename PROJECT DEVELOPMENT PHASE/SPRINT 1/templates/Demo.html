@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Predicton Page-Virtual Eye</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/demo_style.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="{{ url_for('static', filename='css/vE1.png') }}" usemap="#workmap">
+				<map name="workmap">
+ 					 <area shape="rect" coords="0,0,273,736" href="{{ url_for('home') }}">
+ 				</map>
+ 				<ul>
+					<li><a href="{{ url_for('home') }}">Home</a></li>
+					<li><a class="active" href="#">Demo</a></li>
+					<li><a href="{{ url_for('logout') }}">Logout</a></li>
+				</ul>
+			</nav>
+			<div class="center">
+			<h1 class="right">VirtualEye - Life Guard for Swimming Pools to Detect Active Drowning</h1>
+			<h2>Solution</h2>
+			<p>In the Swimming pool which is crowded with
+people, it will be difficult for the lifeguard to
+surveillance the whole pool by him/herself.
+Identifying the drowned
+person in the crowd will be difficult from
+above.</p>
+			</div>
+			<form class="grid" action="/result" method="POST">
+			<div class="center">
+				<center><input type="submit" value="Start Demo"></center> 
+			</div>
+			</form>
+			<div class="center">
+				<p1>Click the "Start demo" button to start a quick demo.</p1>
+				<h4> {{prediction}}</h4>
+			</div>
+			
+</body>
+</html>

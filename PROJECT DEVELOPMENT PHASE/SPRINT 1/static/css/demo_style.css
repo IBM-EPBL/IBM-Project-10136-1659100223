@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+}
+.wrapper{
+	background: url(wall4.webp) no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(1,24,36,255);
+}
+.navbar .logo{
+	width: 140px;
+	height: auto;
+	padding: 20px 20px;
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: rgb(44,172,221);
+	border-radius: 2px;
+}
+.wrapper .center{
+	position: relative;
+	float: right;
+	left: 60px;
+	top: 200px;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	user-select: none;
+}
+.center h1{
+	color: lightgoldenrodyellow;
+	font-size: 30px;
+	text-decoration: 3px underline yellow;
+	padding: 0px 5px;
+	top: 400px;
+	width: 700px;
+	font-weight: bold;
+	text-align: center;
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+.center p {
+	color: #252525;
+	font-size: 20px;
+	width: 600px;
+	top: 0px;
+}
+
+.center p{
+	position: relative;
+	top: 10px;
+	left: -300px;
+	border: 3px solid white;
+	padding: 5px;
+	margin: 3px;
+	border-radius: 12px;
+	background: rgba(173, 216, 230, 0.5);
+}
+.center input {
+	position: relative;
+	align-content: center;
+	height: 50px;
+	width: 150px;
+	top: 190px;
+	left: 130px;
+	font-size: 18px;
+	font-weight: 600;
+	color: white;
+	background: rgb(44,172,221);
+	outline: none;
+	cursor: pointer;
+	border: 3px solid #0b2835;
+	border-radius: 25px;
+	transition: .4s;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+.buttons{
+	margin-left: 25px;
+}
+.center input:hover{
+	background: #0b2835;
+}
+.center p1 {
+	position: relative;
+	left: 580px;
+	top: 248px;
+	color: black;
+	border: 2px solid white;
+	background: rgba(173, 216, 230, 0.5);
+	border-radius: 18px;
+	padding: 5px;
+	font-size: 20px;
+}
+.center h2 {
+	color: white;
+	position: relative;
+	top: 10px;
+}
+.center h4 {
+	position: relative;
+	left: 580px;
+	top: 258px;
+	color: black;
+	font-size: 20px;
+	padding: 10px;
+
+}

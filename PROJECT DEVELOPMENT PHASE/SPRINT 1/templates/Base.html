@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Base Page-Virtual Eye</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/base_style.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="{{ url_for('static', filename='css/vE1.png') }}" usemap="#workmap">
+				<map name="workmap">
+ 					 <area shape="rect" coords="0,0,273,736" href="{{ url_for('base') }}">
+ 				</map>
+				<ul>
+					<li><a href="{{ url_for('login')}}">Login</a></li>
+					<li><a href="{{ url_for('register') }}">Register</a></li>
+				</ul>
+			</nav>
+			<div class="center">
+			<h1 class="right">VirtualEye - Life Guard for Swimming Pools to Detect Active Drowning</h1>
+			<p>Swimming is one of the best exercises that helps people to reduce stress 
+			in this urban lifestyle. Swimming pools are found larger in number in 
+			the hotels, weekend tourist spots and barely people have in their house 
+			backyard. Beginners, especially often feel it difficult to breathe under 
+			water and causes breathing trouble which in turn cause a drowning 
+			accident. Worldwide, drowning produces a higher rate of mortality 
+			without causing injury to children. Children under six of their age are 
+			found to be suffering the highest drowning mortality rates 
+			worldwide.Such kinds of deaths account for the third cause of unplanned 
+			death globally, with about 1.2 million cases yearly.</p>
+			</div>
+			
+		</div>
+</body>
+</html>

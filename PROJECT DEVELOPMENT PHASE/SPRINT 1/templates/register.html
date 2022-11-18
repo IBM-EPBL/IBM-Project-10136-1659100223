@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Page-Virtual Eye</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="crn:v1:bluemix:public:cloudantnosqldb:us-south:a/d903cca2a6284af080a73bc78a65a225:3f7dc338-7a26-4bcc-bef1-27719c199421::" rel="stylesheet" integrity="
+https://b62e1d3b-33ea-4084-839d-e868a260e907-bluemix.cloudantnosqldb.appdomain.cloud" crossorigin="anonymous">
+     <script src="crn:v1:bluemix:public:cloudantnosqldb:us-south:a/d903cca2a6284af080a73bc78a65a225:3f7dc338-7a26-4bcc-bef1-27719c199421::" integrity="
+https://b62e1d3b-33ea-4084-839d-e868a260e907-bluemix.cloudantnosqldb.appdomain.cloud" crossorigin="anonymous"></script>
+<script src="crn:v1:bluemix:public:cloudantnosqldb:us-south:a/d903cca2a6284af080a73bc78a65a225:3f7dc338-7a26-4bcc-bef1-27719c199421::" integrity="
+https://b62e1d3b-33ea-4084-839d-e868a260e907-bluemix.cloudantnosqldb.appdomain.cloud" crossorigin="anonymous"></script>
+ 
+    <script src="loginpage.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <img class="logo" src="{{ url_for('static', filename='css/vE1.png') }}" usemap="#workmap">
+        <map name="workmap">
+           <area shape="rect" coords="0,0,273,736" href="{{ url_for('base') }}">
+        </map>
+        <ul>
+          <li><a  href="{{ url_for('login') }}">Login</a></li>
+          <li><a class="active" href="#">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrapper">
+      <div class="center">
+      <h1>Registration</h1>
+      <form class="grid" action="/afterreg" method="POST">
+        <div class="txt_field">
+          <input type="text" required id="Username" name="name">
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required id="email" name="_id">
+          <span></span>
+          <label>Email ID</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required id="Password" name= "psw">
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div>
+        {% if pred %}
+            <center>
+              <h3 style="color: blue;" class="let_space" font-size ="10px" >{{pred}}</h3>
+            </center> 
+
+          {% endif %}
+        <a href="{{ url_for('afterreg') }}"><input type="submit" value="Register" ></a>
+        </div>
+        <div class="signup_link">
+          Alerady registered? <a href="{{ url_for('login') }}">Sign in</a>
+        </div>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
