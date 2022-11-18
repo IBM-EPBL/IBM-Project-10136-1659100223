@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page-Virtual Eye</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="loginpage.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <img class="logo" src="{{ url_for('static', filename='css/vE1.png') }}" usemap="#workmap">
+        <map name="workmap">
+           <area shape="rect" coords="0,0,273,736" href="{{ url_for('base') }}">
+        </map>
+        <ul>
+          <li><a class="active" href="#">Login</a></li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrapper">
+      <div class="center">
+      <h1>Welcome Back</h1>
+        <form class="grid" action="/afterlogin" method="POST">
+        <div class="txt_field">
+          <input type="text" required id="_id" name = "_id">
+          <span></span>
+          <label>Username</label>
+        </div>
+        {% if pred %}
+            <center>
+              <h3 style="color: blue;" class="let_space" font-size ="10px">{{pred}}</h3>
+            </center> 
+
+          {% endif %}
+        <div class="txt_field">
+          <input type="password" required id="psw" name = "psw"  >
+          <span></span>
+          <label>Password</label>
+        </div>
+        <a href="{{ url_for('afterlogin') }}"><input type="submit" value="Login"></a>
+        <div class="signup_link">
+          Not a member? <a href="{{ url_for('register') }}">Register</a>
+        </div>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
+
