@@ -14,7 +14,9 @@ VirtualEye - Life Guard for Swimming Pools to Detect Active Drowning
 
 
 ## TEAM MEMBERS
-- HARI PRASATH S -TEAM LEAD
+### - HARI PRASATH S [TEAM LEADER]
+
+#### SUBORDINATES :
 - SURENDRAN B    
 - ROHITHARAM K
 - KISHORE D
